@@ -3,24 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HowTogo</title>
-<meta name="description" content="가고 싶은 장소를 페이지별로 모아 두는 iOS 앱">
+<title>HowTogo — 가고 싶은 곳을 한 페이지에</title>
+<meta name="description" content="지도 앱과 인스타그램에서 본 장소를 공유 한 번으로 모으고, 타일을 누르면 바로 길찾기가 열리는 iOS 앱.">
 <link rel="alternate" hreflang="en" href="https://jedjoo21-boom.github.io/HowTogo/en/">
-<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="ko" href="https://jedjoo21-boom.github.io/HowTogo/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HowTogo">
+<meta property="og:title" content="HowTogo — 가고 싶은 곳을 한 페이지에">
+<meta property="og:description" content="공유 한 번으로 장소를 모으고, 누르면 바로 길찾기.">
+<meta property="og:url" content="https://jedjoo21-boom.github.io/HowTogo/">
+<meta property="og:image" content="https://jedjoo21-boom.github.io/HowTogo/assets/icon-512.png">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<!-- 출시 후 App Store 의 앱 ID 를 넣으면 아이폰 사파리 위쪽에 앱 배너가 뜬다: <meta name="apple-itunes-app" content="app-id=앱ID"> -->
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="topbar" aria-label="사이트">
+      <a class="brand" href="./"><img src="assets/favicon.png" alt="" width="32" height="32">HowTogo</a>
+      <a class="hide-narrow" href="support/">고객 지원</a>
+      <a class="hide-narrow" href="privacy/">개인정보처리방침</a>
+      <a href="en/" hreflang="en" lang="en">English</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <img class="hero-icon" src="assets/icon-512.png" alt="HowTogo 앱 아이콘" width="88" height="88">
+        <h1>가고 싶은 곳,<br><span class="accent">한 페이지에.</span></h1>
+        <p class="lead">지도 앱과 인스타그램에서 본 장소를 공유 한 번으로 모으세요. 타일을 누르면 바로 길찾기가 열려요.</p>
+        <!-- 출시 후: Apple 의 공식 "App Store 에서 다운로드" 배지로 바꾸고 href 에 앱 주소를 넣는다 -->
+        <a class="store-badge" aria-disabled="true">App Store 출시 예정</a>
+        <p class="hero-note">iPhone · 페이지 2개까지 무료</p>
+      </div>
+      <div class="hero-shot">
+        <img class="phone" src="assets/ko/visit-order.jpg" alt="서울 여행 페이지. 북촌 한옥마을, 광장시장, 명동, N서울타워, 롯데월드타워 타일에 방문 순서 번호가 붙어 있고, 다녀온 경복궁은 회색으로 맨 뒤에 있다" width="660" height="1434">
+      </div>
+    </div>
+  </div>
+</header>
+
 <main>
-<nav>
-  <a href="./" aria-current="page">HowTogo</a>
-  <a class="lang" href="en/" hreflang="en" lang="en">English</a>
-</nav>
-<h1>HowTogo</h1>
-<p>가고 싶은 장소를 페이지별로 모아 두는 iOS 앱이에요.</p>
-<div class="card">
-  <p><a href="support/">고객 지원</a></p>
-  <p><a href="privacy/">개인정보처리방침</a></p>
-</div>
-<footer>© 2026 HowTogo</footer>
+  <section class="features wrap" aria-label="주요 기능">
+    <article class="feature">
+      <div class="feature-copy">
+        <span class="kicker amber">모으기</span>
+        <h2>공유 한 번이면<br>장소가 저장돼요</h2>
+        <p>구글맵, 네이버 지도, 카카오맵, 애플 지도, 인스타그램에서 <strong>공유 → HowTogo</strong>를 누르세요. 장소 이름과 링크가 함께 들어가고, 주소가 있으면 주소도 저장돼요.</p>
+        <p>메모와 예약 링크를 붙여 두면 여행 준비가 한곳에 모여요.</p>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="assets/ko/place-details.jpg" alt="N서울타워 장소 정보 화면. 길찾기 버튼, 주소, 메모, 전망대 입장권 링크가 보인다" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature flip">
+      <div class="feature-copy">
+        <span class="kicker wine">길찾기</span>
+        <h2>누르면 바로 길찾기</h2>
+        <p>타일을 한 번 누르면 내가 쓰는 지도 앱으로 길안내가 바로 열려요. 구글맵, 애플 지도, 네이버 지도, 카카오맵 중에서 고를 수 있어요.</p>
+        <p>길게 누르면 방문 표시, 편집, 삭제 메뉴가 나오고, 끌어서 순서를 바꾸거나 옆 페이지로 옮길 수 있어요.</p>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="assets/ko/page.jpg" alt="서울 여행 페이지. N서울타워, 경복궁, 롯데월드타워, 광장시장, 북촌 한옥마을, 명동이 색깔 타일로 놓여 있다" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-copy">
+        <span class="kicker slate">경로 최적화</span>
+        <h2>돌아가지 않는<br>순서로 정리해요</h2>
+        <p>페이지의 장소를 가장 짧게 도는 순서로 바꿔 줘요. 직선거리, 도보, 자동차 중에서 기준을 고르고, 바꾸기 전에 새 순서를 먼저 보여 줘요.</p>
+        <ul>
+          <li>타일 오른쪽 위에 방문 순서 번호가 붙어요.</li>
+          <li>다녀온 곳은 방문 표시하면 맨 뒤로 가요.</li>
+          <li>마음에 안 들면 되돌리기 한 번이면 돼요.</li>
+        </ul>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="assets/ko/optimize-route.jpg" alt="경로 최적화 화면. 새 순서로 바꾸면 총 이동 거리가 31.9km에서 16.5km로 줄어든다" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+  </section>
+
+  <section class="extras wrap" aria-labelledby="extras-title">
+    <h2 id="extras-title">작지만 든든한 기능들</h2>
+    <div class="extras-grid">
+      <div class="card">
+        <span class="dot" style="background: var(--amber)"></span>
+        <h3>여행마다 한 페이지</h3>
+        <p>한 페이지에 6곳씩, 페이지마다 배경색이나 사진을 골라 꾸밀 수 있어요.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--wine)"></span>
+        <h3>홈 화면 위젯</h3>
+        <p>위젯에서 장소를 누르면 바로 길찾기. 잠금 화면에도 둘 수 있어요.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--slate)"></span>
+        <h3>iCloud 자동 보관</h3>
+        <p>같은 Apple 계정이면 다른 기기와 다시 설치한 앱에서도 그대로 돌아와요.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--teal)"></span>
+        <h3>페이지 공유</h3>
+        <p>메시지, 카카오톡, AirDrop 으로 페이지를 보내면 받은 사람의 앱에 그대로 추가돼요.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--amber)"></span>
+        <h3>백업 파일</h3>
+        <p>모든 페이지를 파일 하나로 내보내고, 언제든 다시 가져올 수 있어요.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--wine)"></span>
+        <h3>로그인 없이</h3>
+        <p>회원가입 없이 바로 쓰세요. 처음 열면 예시 페이지가 준비되어 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans wrap" aria-label="가격과 개인정보">
+    <div class="card">
+      <h3>페이지 2개까지 무료</h3>
+      <p>더 필요하면 <strong>페이지 무제한</strong>을 한 번만 구매하세요. 구독이 아니라서 다시 결제되지 않고, 구매하지 않아도 지금 있는 페이지와 장소는 그대로 남아요.</p>
+    </div>
+    <div class="card">
+      <h3>개인정보를 모으지 않아요</h3>
+      <p>계정, 광고, 추적이 없어요. 저장한 장소는 내 기기와 내 iCloud 에만 있어요. <a href="privacy/">개인정보처리방침</a></p>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="바닥글">
+      <a href="support/">고객 지원</a>
+      <a href="privacy/">개인정보처리방침</a>
+      <a href="en/" hreflang="en" lang="en">English</a>
+      <a href="mailto:jedjoo21@gmail.com">jedjoo21@gmail.com</a>
+    </nav>
+    <p>© 2026 HowTogo. Apple, iPhone, iCloud, App Store 는 Apple Inc. 의 상표입니다.</p>
+  </div>
+</footer>
+
 </body>
 </html>

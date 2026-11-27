@@ -3,24 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HowTogo</title>
-<meta name="description" content="An iOS app for collecting the places you want to visit into pages">
+<title>HowTogo — Every place you want to go, on one page</title>
+<meta name="description" content="An iOS app that collects the places you find in maps apps and Instagram with one share, and opens directions with one tap.">
 <link rel="alternate" hreflang="ko" href="https://jedjoo21-boom.github.io/HowTogo/">
-<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="https://jedjoo21-boom.github.io/HowTogo/en/">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HowTogo">
+<meta property="og:title" content="HowTogo — Every place you want to go, on one page">
+<meta property="og:description" content="Save places with one share. Tap for directions.">
+<meta property="og:url" content="https://jedjoo21-boom.github.io/HowTogo/en/">
+<meta property="og:image" content="https://jedjoo21-boom.github.io/HowTogo/assets/icon-512.png">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<!-- After launch, add the App Store app ID to show Safari's app banner: <meta name="apple-itunes-app" content="app-id=APP_ID"> -->
+<link rel="stylesheet" href="../landing.css">
 </head>
 <body>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="topbar" aria-label="Site">
+      <a class="brand" href="./"><img src="../assets/favicon.png" alt="" width="32" height="32">HowTogo</a>
+      <a class="hide-narrow" href="support/">Support</a>
+      <a class="hide-narrow" href="privacy/">Privacy Policy</a>
+      <a href="../" hreflang="ko" lang="ko">한국어</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <img class="hero-icon" src="../assets/icon-512.png" alt="HowTogo app icon" width="88" height="88">
+        <h1>Places to go,<br><span class="accent">on one page.</span></h1>
+        <p class="lead">Save places from maps apps and Instagram with a single share. Tap a tile and directions open right away.</p>
+        <!-- After launch: replace with Apple's official "Download on the App Store" badge and link to the app -->
+        <a class="store-badge" aria-disabled="true">Coming soon to the App Store</a>
+        <p class="hero-note">iPhone · Free for up to 2 pages</p>
+      </div>
+      <div class="hero-shot">
+        <img class="phone" src="../assets/en/visit-order.jpg" alt="A Seoul Trip page with colored tiles for Gyeongbokgung Palace, Bukchon Hanok Village, Gwangjang Market, Myeongdong, N Seoul Tower, and Lotte World Tower, each with a visit order number" width="660" height="1434">
+      </div>
+    </div>
+  </div>
+</header>
+
 <main>
-<nav>
-  <a href="./" aria-current="page">HowTogo</a>
-  <a class="lang" href="../" hreflang="ko" lang="ko">한국어</a>
-</nav>
-<h1>HowTogo</h1>
-<p>An iOS app for collecting the places you want to visit into pages.</p>
-<div class="card">
-  <p><a href="support/">Support</a></p>
-  <p><a href="privacy/">Privacy Policy</a></p>
-</div>
-<footer>© 2026 HowTogo</footer>
+  <section class="features wrap" aria-label="Features">
+    <article class="feature">
+      <div class="feature-copy">
+        <span class="kicker amber">Collect</span>
+        <h2>One share<br>saves the place</h2>
+        <p>In Google Maps, Apple Maps, Naver Map, KakaoMap, or Instagram, tap <strong>Share → HowTogo</strong>. The place name and link are saved together, along with the address when there is one.</p>
+        <p>Add notes and booking links so everything for your trip lives in one spot.</p>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="../assets/en/place-details.jpg" alt="N Seoul Tower details with a Directions button, the address, a note, and an observatory tickets link" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature flip">
+      <div class="feature-copy">
+        <span class="kicker wine">Directions</span>
+        <h2>Tap for directions</h2>
+        <p>Tap a tile once and directions open in the maps app you use — Google Maps, Apple Maps, Naver Map, or KakaoMap.</p>
+        <p>Touch and hold for Mark as Visited, Edit, and Delete. Drag tiles to reorder them or move them to the next page.</p>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="../assets/en/page.jpg" alt="A Seoul Trip page with colored tiles for N Seoul Tower, Gyeongbokgung Palace, Lotte World Tower, Gwangjang Market, Bukchon Hanok Village, and Myeongdong" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-copy">
+        <span class="kicker slate">Optimize Route</span>
+        <h2>Visit in an order<br>that doesn’t double back</h2>
+        <p>Reorder a page’s places into the shortest route. Choose straight line, walking, or driving, and see the new order before anything changes.</p>
+        <ul>
+          <li>Each tile shows its visit order in the top-right corner.</li>
+          <li>Mark a place as visited and it moves to the end.</li>
+          <li>Changed your mind? One tap to undo.</li>
+        </ul>
+      </div>
+      <div class="feature-shot">
+        <img class="phone" src="../assets/en/optimize-route.jpg" alt="Optimize Route screen. The new order shortens the total distance from 31.9 km to 16.5 km" width="660" height="1434" loading="lazy">
+      </div>
+    </article>
+  </section>
+
+  <section class="extras wrap" aria-labelledby="extras-title">
+    <h2 id="extras-title">Small things that help</h2>
+    <div class="extras-grid">
+      <div class="card">
+        <span class="dot" style="background: var(--amber)"></span>
+        <h3>A page for every trip</h3>
+        <p>Six places per page, each page with its own background color or photo.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--wine)"></span>
+        <h3>Home Screen widget</h3>
+        <p>Tap a place in the widget for directions. Works on the Lock Screen too.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--slate)"></span>
+        <h3>Kept in iCloud</h3>
+        <p>With the same Apple Account, your places come back on other devices and after reinstalling.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--teal)"></span>
+        <h3>Share a page</h3>
+        <p>Send a page through Messages or AirDrop, and it’s added to your friend’s app as is.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--amber)"></span>
+        <h3>Backup file</h3>
+        <p>Export every page to a single file and import it again anytime.</p>
+      </div>
+      <div class="card">
+        <span class="dot" style="background: var(--wine)"></span>
+        <h3>No sign-in</h3>
+        <p>No account needed. Sample pages are ready the first time you open the app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans wrap" aria-label="Pricing and privacy">
+    <div class="card">
+      <h3>Free for up to 2 pages</h3>
+      <p>Need more? Buy <strong>Unlimited Pages</strong> once. It’s not a subscription, so you won’t be charged again — and your existing pages and places stay even if you don’t buy it.</p>
+    </div>
+    <div class="card">
+      <h3>No personal data collected</h3>
+      <p>No accounts, ads, or tracking. Your places live only on your device and in your own iCloud. <a href="privacy/">Privacy Policy</a></p>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="support/">Support</a>
+      <a href="privacy/">Privacy Policy</a>
+      <a href="../" hreflang="ko" lang="ko">한국어</a>
+      <a href="mailto:jedjoo21@gmail.com">jedjoo21@gmail.com</a>
+    </nav>
+    <p>© 2026 HowTogo. Apple, iPhone, iCloud, and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
 </body>
 </html>

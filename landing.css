@@ -1,0 +1,272 @@
+/* HowTogo 제품 소개 페이지 (index.html, en/index.html) 전용. 개인정보·지원 페이지는 style.css 를 쓴다. */
+:root {
+  --bg: #faf6f0;
+  --surface: #ffffff;
+  --text: #2a211a;
+  --muted: #74675b;
+  --line: #eadfd2;
+  --hero-bg: #4f3b2a;
+  --hero-text: #fbf3e8;
+  --hero-muted: #d9c7b3;
+  --amber: #efa93f;
+  --wine: #833641;
+  --slate: #4a5c86;
+  --teal: #2f6563;
+  --accent: #b5532f;
+  --badge-bg: #1c1712;
+  --badge-text: #ffffff;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17120e;
+    --surface: #221b15;
+    --text: #f4ece2;
+    --muted: #b5a797;
+    --line: #362b22;
+    --hero-bg: #2d2118;
+    --hero-text: #fbf3e8;
+    --hero-muted: #cdb9a3;
+    --accent: #f0a66f;
+    --badge-bg: #fbf3e8;
+    --badge-text: #1c1712;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-text-size-adjust: 100%;
+}
+
+a { color: var(--accent); }
+
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 머리 */
+.hero {
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  overflow: hidden;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  font-size: 15px;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--hero-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  margin-right: auto;
+}
+
+.topbar .brand img { width: 32px; height: 32px; border-radius: 8px; }
+.topbar a { color: var(--hero-muted); text-decoration: none; }
+.topbar a:hover { color: var(--hero-text); }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 0 0;
+}
+
+.hero-copy { padding-bottom: 64px; }
+
+.hero-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  margin-bottom: 24px;
+}
+
+.hero h1, .feature h2 { text-wrap: balance; }
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.hero h1 .accent { color: var(--amber); }
+
+.hero .lead {
+  font-size: 19px;
+  color: var(--hero-muted);
+  margin: 0 0 32px;
+  max-width: 30em;
+}
+
+.store-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.store-badge svg { width: 20px; height: 20px; fill: currentColor; }
+.store-badge[aria-disabled="true"] { cursor: default; opacity: 0.92; }
+
+.hero-note { font-size: 14px; color: var(--hero-muted); margin: 12px 0 0; }
+
+.hero-shot {
+  align-self: end;
+  justify-self: center;
+  width: min(100%, 330px);
+  margin-bottom: -120px;
+}
+
+/* 휴대폰 화면 */
+.phone {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 44px;
+  border: 8px solid #0f0c09;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  background: #0f0c09;
+}
+
+/* 기능 */
+.features { padding-top: 56px; padding-bottom: 24px; }
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  padding: 48px 0;
+}
+
+.feature + .feature { border-top: 1px solid var(--line); }
+.feature.flip .feature-copy { order: 2; }
+
+.feature-shot { justify-self: center; width: min(100%, 300px); }
+
+.feature .kicker {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.kicker.amber { background: #c9862a; }
+.kicker.wine { background: var(--wine); }
+.kicker.slate { background: var(--slate); }
+.kicker.teal { background: var(--teal); }
+
+.feature h2 {
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 14px;
+}
+
+.feature p { color: var(--muted); margin: 0 0 12px; }
+
+.feature ul { padding-left: 20px; margin: 12px 0 0; color: var(--muted); }
+.feature li { margin: 6px 0; }
+
+/* 작은 장점들 */
+.extras { padding-top: 24px; padding-bottom: 64px; }
+
+.extras h2 { font-size: 28px; margin: 0 0 24px; text-align: center; }
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.card h3 { font-size: 18px; margin: 0 0 6px; }
+.card p { color: var(--muted); margin: 0; font-size: 16px; }
+
+.card .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+/* 가격·개인정보 */
+.plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-bottom: 72px;
+}
+
+.plans .card { padding: 28px; }
+.plans h3 { font-size: 22px; margin-bottom: 8px; }
+
+/* 꼬리 */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 48px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer nav { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 10px; }
+footer a { color: var(--muted); }
+
+/* 좁은 화면 */
+@media (max-width: 820px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 0; padding-top: 24px; }
+  .hero-copy { padding-bottom: 40px; }
+  .hero h1 { font-size: 36px; }
+  .hero .lead { font-size: 17px; }
+  .hero-shot { width: min(78%, 300px); margin-bottom: -96px; }
+  .features { padding-top: 32px; }
+  .feature { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .feature.flip .feature-copy { order: 0; }
+  .feature h2 { font-size: 26px; }
+  .feature-shot { width: min(78%, 280px); }
+  .extras-grid, .plans { grid-template-columns: 1fr; }
+  .topbar { gap: 14px; font-size: 14px; }
+  .topbar .hide-narrow { display: none; }
+}
